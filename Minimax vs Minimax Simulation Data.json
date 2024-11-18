@@ -1,0 +1,14 @@
+{
+    "Algorithm 1": "Minimax",
+    "Algorithm 2": "Minimax",
+    "Average Nodes Visited per Move": 68686.11111111111,
+    "Average Time Taken per Move (ms)": 111.62159707811144,
+    "Overall Game Time (seconds)": 10.04594373703003,
+    "Average Game Tree Size": 618175.0,
+    "Average Branches Pruned": 0.0,
+    "Game Outcomes": {
+        "X": 0,
+        "O": 0,
+        "Draw": 10
+    }
+}
