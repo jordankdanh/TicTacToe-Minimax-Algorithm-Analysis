@@ -2,8 +2,8 @@
     "Algorithm 1": "Minimax",
     "Algorithm 2": "Minimax",
     "Average Nodes Visited per Move": 68686.11111111111,
-    "Average Time Taken per Move (ms)": 112.59824170006647,
-    "Overall Game Time (seconds)": 50.66920876502991,
+    "Average Time Taken per Move (ms)": 116.4999336666531,
+    "Overall Game Time (seconds)": 52.4249701499939,
     "Average Game Tree Size": 618175.0,
     "Average Branches Pruned": 0.0,
     "Game Outcomes": {

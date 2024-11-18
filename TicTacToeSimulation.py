@@ -181,8 +181,12 @@ class TicTacToeAIvsAI:
     def run_simulation(self):
         """Simulates multiple games and calculates statistics."""
         start_time = time.time()
-        for _ in range(self.games_to_play):
+        for amount_of_games in range(self.games_to_play):
             self.play_game()
+            if (amount_of_games + 1) % 10 == 0:
+                print(f"Finished playing {amount_of_games + 1} games of Tic Tac Toe")
+
+
         end_time = time.time()
 
         average_nodes = self.total_nodes / (self.games_to_play * 9)

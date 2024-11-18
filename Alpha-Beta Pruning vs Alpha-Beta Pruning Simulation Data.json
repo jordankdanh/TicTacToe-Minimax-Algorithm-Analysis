@@ -2,8 +2,8 @@
     "Algorithm 1": "Alpha-Beta Pruning",
     "Algorithm 2": "Alpha-Beta Pruning",
     "Average Nodes Visited per Move": 10825.777777777777,
-    "Average Time Taken per Move (ms)": 19.916396670871308,
-    "Overall Game Time (seconds)": 8.96237850189209,
+    "Average Time Taken per Move (ms)": 19.843960338168674,
+    "Overall Game Time (seconds)": 8.929782152175903,
     "Average Game Tree Size": 97432.0,
     "Average Branches Pruned": 76655.0,
     "Game Outcomes": {
