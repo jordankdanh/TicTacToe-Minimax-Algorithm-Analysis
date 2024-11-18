@@ -2,13 +2,13 @@
     "Algorithm 1": "Minimax",
     "Algorithm 2": "Alpha-Beta Pruning",
     "Average Nodes Visited per Move": 63457.0,
-    "Average Time Taken per Move (ms)": 105.1579342948066,
-    "Overall Game Time (seconds)": 9.464214086532593,
+    "Average Time Taken per Move (ms)": 105.65890259212918,
+    "Overall Game Time (seconds)": 47.54650616645813,
     "Average Game Tree Size": 571113.0,
     "Average Branches Pruned": 10923.0,
     "Game Outcomes": {
         "X": 0,
         "O": 0,
-        "Draw": 10
+        "Draw": 50
     }
 }

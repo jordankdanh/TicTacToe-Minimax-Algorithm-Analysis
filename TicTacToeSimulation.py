@@ -209,13 +209,13 @@ class TicTacToeAIvsAI:
 
 if __name__ == "__main__":
     print("Simulating Minimax vs Minimax...")
-    game_minimax_vs_minimax = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="minimax", games=10)
+    game_minimax_vs_minimax = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="minimax", games=50)
     game_minimax_vs_minimax.run_simulation()
 
     print("Simulating Alpha-Beta Pruning vs Alpha-Beta Pruning...")
-    game_alpha_beta_vs_alpha_beta = TicTacToeAIvsAI(algorithm1="alphabeta", algorithm2="alphabeta", games=10)
+    game_alpha_beta_vs_alpha_beta = TicTacToeAIvsAI(algorithm1="alphabeta", algorithm2="alphabeta", games=50)
     game_alpha_beta_vs_alpha_beta.run_simulation()
 
     print("Simulating Minimax vs Alpha-Beta Pruning...")
-    game_minimax_vs_alpha_beta = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="alphabeta", games=10)
+    game_minimax_vs_alpha_beta = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="alphabeta", games=50)
     game_minimax_vs_alpha_beta.run_simulation()
