@@ -180,21 +180,29 @@ class TicTacToeAIvsAI:
 
     def run_simulation(self):
         """Simulates multiple games and calculates statistics."""
+        runtime_per_ten_games = []
+        overall_start_time = time.time()
+
         start_time = time.time()
+
         for amount_of_games in range(self.games_to_play):
             self.play_game()
+
             if (amount_of_games + 1) % 10 == 0:
                 print(f"Finished playing {amount_of_games + 1} games of Tic Tac Toe")
+                end_time_per_tenth_game = time.time()
+                runtime_for_ten_games = end_time_per_tenth_game - start_time
+                runtime_per_ten_games.append(runtime_for_ten_games)
 
-
-        end_time = time.time()
+        overall_end_time = time.time()
 
         average_nodes = self.total_nodes / (self.games_to_play * 9)
         average_game_tree_size = self.total_game_tree_size / self.games_to_play
         average_pruned = self.total_pruned_branches / self.games_to_play
-        overall_game_time = end_time - start_time
+        overall_game_time = overall_end_time - overall_start_time
         algorithm1 = "Alpha-Beta Pruning" if self.algorithm1 == "alphabeta" else "Minimax"
         algorithm2 = "Alpha-Beta Pruning" if self.algorithm2 == "alphabeta" else "Minimax"
+        
         data = {
             "Algorithm 1": algorithm1,
             "Algorithm 2": algorithm2,
@@ -204,22 +212,23 @@ class TicTacToeAIvsAI:
             "Average Game Tree Size": average_game_tree_size,
             "Average Branches Pruned": average_pruned,
             "Game Outcomes": self.results,
+            "Runtime Per Ten Games": runtime_per_ten_games
         }
 
         with open(f"{algorithm1} vs {algorithm2} Simulation Data.json", "w") as json_file:
             json.dump(data, json_file, indent=4)
         print(f"Results saved to {algorithm1} vs {algorithm2} Simulation Data.json")
 
+        return data
 
-if __name__ == "__main__":
-    print("Simulating Minimax vs Minimax...")
-    game_minimax_vs_minimax = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="minimax", games=50)
-    game_minimax_vs_minimax.run_simulation()
+print("Simulating Alpha-Beta Pruning vs Alpha-Beta Pruning...")
+simulation = TicTacToeAIvsAI(algorithm1="alphabeta", algorithm2="alphabeta", games=50)
+results = simulation.run_simulation()
 
-    print("Simulating Alpha-Beta Pruning vs Alpha-Beta Pruning...")
-    game_alpha_beta_vs_alpha_beta = TicTacToeAIvsAI(algorithm1="alphabeta", algorithm2="alphabeta", games=50)
-    game_alpha_beta_vs_alpha_beta.run_simulation()
+print("Simulating Minimax vs Minimax...")
+simulation = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="minimax", games=50)
+results = simulation.run_simulation()
 
-    print("Simulating Minimax vs Alpha-Beta Pruning...")
-    game_minimax_vs_alpha_beta = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="alphabeta", games=50)
-    game_minimax_vs_alpha_beta.run_simulation()
+print("Simulating Minimax vs Alpha-Beta Pruning...")
+simulation = TicTacToeAIvsAI(algorithm1="minimax", algorithm2="alphabeta", games=50)
+results = simulation.run_simulation()
